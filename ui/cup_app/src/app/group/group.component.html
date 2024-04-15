@@ -1,0 +1,18 @@
+<h4>Group {{groupM.gName}}</h4>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of groupM.countries; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{dataItem.CountryFlag}} {{dataItem.CountryCode}}</td>
+        </tr>
+    </tbody>
+</table>
+    
+
+    

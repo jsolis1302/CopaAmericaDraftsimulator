@@ -1,0 +1,29 @@
+
+<div class="container">
+    <h2>Welcome to the Draft</h2>
+    <div>
+      <button class="btn btn-primary"
+      *ngIf="!getGroupLength()"
+      (click)="startDraft()"
+      >Begin Draft!</button>
+  
+      <button class="btn btn-danger" 
+      *ngIf="getGroupLength()"
+      (click)="ngReset()"
+      >Reset</button>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+            <app-group [gName]="groups[0]"></app-group>
+            <app-group [gName]="groups[2]"></app-group>
+
+        </div>
+        <div class="col-sm-6">
+            <app-group [gName]="groups[1]"></app-group>
+            <app-group [gName]="groups[3]"></app-group>
+
+        </div>
+
+    </div>
+  </div>  

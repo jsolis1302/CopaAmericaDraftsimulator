@@ -1,0 +1,9 @@
+ol {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+
+  .small-text {
+    font-size: 0.875em; /* 14px/16=0.875em */
+  }

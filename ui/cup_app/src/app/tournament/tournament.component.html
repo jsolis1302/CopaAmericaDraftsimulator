@@ -1,0 +1,58 @@
+<div class="row">
+    <app-select-country [QFin]="QFin"></app-select-country>
+</div>
+
+<div class="tournament-container">
+    <div class="tournament-headers">
+      <h3>Quarter-Finals</h3>
+      <h3>Semi-Finals</h3>
+      <h3>Final</h3>
+      <h3>Winner</h3>
+    </div>
+  
+    <div class="tournament-brackets">
+      <ul class="bracket bracket-2">
+        <li class="team-item">
+            <p *ngIf="QFin.length ==0">1A</p>
+            <p *ngIf="QFin.length !=0">{{QFin[0].CountryFlag + QFin[0].CountryCode}}</p>
+            <time>VS</time>
+            <p *ngIf="!QFin[3]">2B</p>
+            <p *ngIf="QFin[3]">{{QFin[3].CountryFlag + QFin[3].CountryCode}}</p>
+        </li>
+        <li class="team-item">
+            <p *ngIf="!QFin[4]">1C</p>
+            <p *ngIf="QFin[4]">{{QFin[4].CountryFlag + QFin[4].CountryCode}}</p>
+            <time>VS</time>
+            <p *ngIf="!QFin[7]">2D</p>
+            <p *ngIf="QFin[7]">{{QFin[7].CountryFlag + QFin[7].CountryCode}}</p>
+
+        </li>
+        <li class="team-item">
+            <p *ngIf="!QFin[2]">1B</p>
+            <p *ngIf="QFin[2]">{{QFin[2].CountryFlag + QFin[2].CountryCode}}</p>
+            <time>VS</time>
+            <p *ngIf="!QFin[1]">2A</p>
+            <p *ngIf="QFin[1]">{{QFin[1].CountryFlag + QFin[1].CountryCode}}</p>
+        </li>
+        <li class="team-item">            
+
+            <p *ngIf="!QFin[6]">1D</p>
+            <p *ngIf="QFin[6]">{{QFin[6].CountryFlag + QFin[6].CountryCode}}</p>
+            <time>VS</time>
+            <p *ngIf="!QFin[5]">2C</p>
+            <p *ngIf="QFin[5]">{{QFin[5].CountryFlag + QFin[5].CountryCode}}</p>
+        </li>
+      </ul>  
+      <ul class="bracket bracket-3">
+        <li class="team-item">SF4<time>20:00</time>SF4</li>
+        <li class="team-item">SF4<time>20:00</time> SF4</li>
+      </ul>  
+      <ul class="bracket bracket-4">
+        <li class="team-item">F1 <time>20:00</time> F2</li>
+      </ul>  
+  
+      <ul class="bracket bracket-5">
+        <li class="team-item">Copa Champions</li>
+      </ul>  
+    </div>
+  </div>

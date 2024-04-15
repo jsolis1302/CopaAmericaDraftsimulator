@@ -1,0 +1,64 @@
+
+    <div class="col-sm" *ngIf="isSelectedComp('A')">
+        <table class="table table-bordered table-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>GA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dataItem of GA; let idx=index;"
+                [ngClass]="selectedClass == idx ? 'table-info' : 'transparent' "
+                (click)="clickedQF(dataItem,idx)">      
+                    <td   >{{dataItem.CountryFlag + dataItem.CountryCode}}</td>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm" *ngIf="isSelectedComp('B')">
+        <table class="table table-bordered table-sm ">
+            <thead class="table-dark">
+                <tr>
+                    <th>GB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dataItem of GB; let idx=index;"
+                [ngClass]="selectedClass == idx ? 'table-info' : 'transparent' "
+                (click)="clickedQF(dataItem,idx)">      
+                    <td >{{dataItem.CountryFlag}} {{dataItem.CountryCode}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm" *ngIf="isSelectedComp('C')">
+        <table class="table table-bordered table-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>GC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dataItem of GC">      
+                    <td (click)="clickedQF(dataItem,2)">{{dataItem.CountryFlag}} {{dataItem.CountryCode}}</td>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm" *ngIf="isSelectedComp('D')">
+        <table class="table table-bordered table-sm ">
+            <thead class="table-dark">
+                <tr>
+                    <th>GD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dataItem of GD">      
+                    <td (click)="clickedQF(dataItem,3)">{{dataItem.CountryFlag}} {{dataItem.CountryCode}}</td>
+                </tr>
+    
+            </tbody>
+        </table>
+    </div>
